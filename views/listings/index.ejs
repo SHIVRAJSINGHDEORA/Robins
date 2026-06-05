@@ -1,0 +1,289 @@
+<% layout("/layouts/boilerplate") %>
+
+<div class="filters">
+  <div class="filter-icon">
+    <i class="fa-regular fa-house" style="color: #ffffff"></i>
+  </div>
+  <div class="filter-icon">
+    <i class="fa-regular fa-building" style="color: #ffffff"></i>
+  </div>
+  <div class="filter-icon">
+    <i class="fa-solid fa-sailboat" style="color: #ffffff"></i>
+  </div>
+  <div class="filter-icon">
+    <i class="fa-solid fa-chess-rook" style="color: #ffffff"></i>
+  </div>
+  <div class="filter-icon">
+    <i class="fa-solid fa-igloo" style="color: #ffffff"></i>
+  </div>
+  <div class="filter-icon">
+    <i class="fa-solid fa-mountain" style="color: #ffffff"></i>
+  </div>
+  <div class="filter-icon">
+    <i class="fa-solid fa-cow" style="color: #ffffff"></i>
+  </div>
+  <div class="filter-icon">
+    <i class="fa-solid fa-hotel" style="color: #ffffff"></i>
+  </div>
+  <div class="filter-icon">
+    <i class="fa-solid fa-mug-hot" style="color: #ffffff"></i>
+  </div>
+  <div class="filter-icon">
+    <i class="fa-solid fa-champagne-glasses" style="color: #ffffff"></i>
+  </div>
+</div>
+<hr />
+<div class="explore">
+  <div class="row-body">
+    <div class="card-row-head">
+      <h5>Popular homes in Jaipur</h5>
+      <button>
+        <i class="fa-solid fa-arrow-right" style="color: #00ed64"></i>
+      </button>
+    </div>
+
+    <div class="card-row">
+      <% for(let listing of featuredLocations.Jaipur){ %> 
+      <a href="/listings/<%= listing._id %>" class="listing-link">
+        <div class="card-listing">
+          <div class="card-img">
+            <img src="<%= listing.image.url %>" alt="listing" />
+          </div>
+          <div class="card-body">
+            <div class="card-title">
+              <b><%= listing.title %></b>
+            </div>
+            <div class="card-text">
+              &#8377;<%= listing.price.toLocaleString("en-IN") %>/- Night
+            </div>
+          </div>
+        </div>
+      </a>
+      <% } %>
+    </div>
+  </div>
+  <div class="row-body">
+    <div class="card-row-head">
+      <h5>Available in Udaipur in next weekend</h5>
+      <button>
+        <i class="fa-solid fa-arrow-right" style="color: #00ed64"></i>
+      </button>
+    </div>
+
+    <div class="card-row">
+      <% for(let listing of featuredLocations.Udaipur){ %> 
+      <a href="/listings/<%= listing._id %>" class="listing-link">
+        <div class="card-listing">
+          <div class="card-img">
+            <img src="<%= listing.image.url %>" alt="listing" />
+          </div>
+          <div class="card-body">
+            <div class="card-title">
+              <b><%= listing.title %></b>
+            </div>
+            <div class="card-text">
+              &#8377;<%= listing.price.toLocaleString("en-IN") %>/- Night
+            </div>
+          </div>
+        </div>
+      </a>
+       <% } %>
+    </div>
+  </div>
+  <div class="row-body">
+    <div class="card-row-head">
+      <h5>Stay in Gurgaon Distric</h5>
+      <button>
+        <i class="fa-solid fa-arrow-right" style="color: #00ed64"></i>
+      </button>
+    </div>
+
+    <div class="card-row">
+      <% for(let listing of featuredLocations.Gurgaon){ %> 
+      <a href="/listings/<%= listing._id %>" class="listing-link">
+        <div class="card-listing">
+          <div class="card-img">
+            <img src="<%= listing.image.url %>" alt="listing" />
+          </div>
+          <div class="card-body">
+            <div class="card-title">
+              <b><%= listing.title %></b>
+            </div>
+            <div class="card-text">
+              &#8377;<%= listing.price.toLocaleString("en-IN") %>/- Night
+            </div>
+          </div>
+        </div>
+      </a>
+      <% } %>
+    </div>
+  </div>
+  <div class="row-body">
+    <div class="card-row-head">
+      <h5>Available next month in New Delhi</h5>
+      <button>
+        <i class="fa-solid fa-arrow-right" style="color: #00ed64"></i>
+      </button>
+    </div>
+
+    <div class="card-row">
+      <% for(let listing of featuredLocations.Delhi){ %> 
+      <a href="/listings/<%= listing._id %>" class="listing-link">
+        <div class="card-listing">
+          <div class="card-img">
+            <img src="<%= listing.image.url %>" alt="listing" />
+          </div>
+          <div class="card-body">
+            <div class="card-title">
+              <b><%= listing.title %></b>
+            </div>
+            <div class="card-text">
+              &#8377;<%= listing.price.toLocaleString("en-IN") %>/- Night
+            </div>
+          </div>
+        </div>
+      </a>
+      <% } %>
+    </div>
+  </div>
+  <div class="row-body">
+    <div class="card-row-head">
+      <h5>Homes in north Goa</h5>
+      <button>
+        <i class="fa-solid fa-arrow-right" style="color: #00ed64"></i>
+      </button>
+    </div>
+
+    <div class="card-row">
+      <% for(let listing of featuredLocations.Goa){ %> 
+      <a href="/listings/<%= listing._id %>" class="listing-link">
+        <div class="card-listing">
+          <div class="card-img">
+            <img src="<%= listing.image.url %>" alt="listing" />
+          </div>
+          <div class="card-body">
+            <div class="card-title">
+              <b><%= listing.title %></b>
+            </div>
+            <div class="card-text">
+              &#8377;<%= listing.price.toLocaleString("en-IN") %>/- Night
+            </div>
+          </div>
+        </div>
+      </a>
+       <% } %>
+    </div>
+  </div>
+  <div class="row-body">
+    <div class="card-row-head">
+      <h5>Places to stay in Bengaluru</h5>
+      <button>
+        <i class="fa-solid fa-arrow-right" style="color: #00ed64"></i>
+      </button>
+    </div>
+
+    <div class="card-row">
+      <% for(let listing of featuredLocations.Bengaluru){ %> 
+      <a href="/listings/<%= listing._id %>" class="listing-link">
+        <div class="card-listing">
+          <div class="card-img">
+            <img src="<%= listing.image.url %>" alt="listing" />
+          </div>
+          <div class="card-body">
+            <div class="card-title">
+              <b><%= listing.title %></b>
+            </div>
+            <div class="card-text">
+              &#8377;<%= listing.price.toLocaleString("en-IN") %>/- Night
+            </div>
+          </div>
+        </div>
+      </a>
+      <% } %>
+    </div>
+  </div>
+  <div class="row-body">
+    <div class="card-row-head">
+      <h5>Check out homes in Pune</h5>
+      <button>
+        <i class="fa-solid fa-arrow-right" style="color: #00ed64"></i>
+      </button>
+    </div>
+
+    <div class="card-row">
+      <% for(let listing of featuredLocations.Pune){ %> 
+      <a href="/listings/<%= listing._id %>" class="listing-link">
+        <div class="card-listing">
+          <div class="card-img">
+            <img src="<%= listing.image.url %>" alt="listing" />
+          </div>
+          <div class="card-body">
+            <div class="card-title">
+              <b><%= listing.title %></b>
+            </div>
+            <div class="card-text">
+              &#8377;<%= listing.price.toLocaleString("en-IN") %>/- Night
+            </div>
+          </div>
+        </div>
+      </a>
+       <% } %>
+    </div>
+  </div>
+  <div class="row-body">
+    <div class="card-row-head">
+      <h5>Popular homes in Jodhpur</h5>
+      <button>
+        <i class="fa-solid fa-arrow-right" style="color: #00ed64"></i>
+      </button>
+    </div>
+
+    <div class="card-row">
+      <% for(let listing of featuredLocations.Jodhpur){ %> 
+      <a href="/listings/<%= listing._id %>" class="listing-link">
+        <div class="card-listing">
+          <div class="card-img">
+            <img src="<%= listing.image.url %>" alt="listing" />
+          </div>
+          <div class="card-body">
+            <div class="card-title">
+              <b><%= listing.title %></b>
+            </div>
+            <div class="card-text">
+              &#8377;<%= listing.price.toLocaleString("en-IN") %>/- Night
+            </div>
+          </div>
+        </div>
+      </a>
+      <% } %>
+    </div>
+  </div>
+  <div class="more-explore-body">
+    <div class="card-row-head">
+      <h5>Explore More !</h5>
+    </div>
+    <hr>
+    <br>
+    <div class="explore-more-listings">
+      <% for(let listing of allListings){ %>
+      <a href="/listings/<%= listing._id %>" class="listing-link">
+        <div class="more-explore-card">
+          <div class="card-img">
+            <img src="<%= listing.image.url %>" alt="listing" />
+          </div>
+          <div class="card-body">
+            <div class="card-title">
+              <b><%= listing.title %></b>
+            </div>
+            <div class="card-text">
+              &#8377;<%= listing.price.toLocaleString("en-IN") %>/- Night
+            </div>
+          </div>
+        </div>
+      </a>
+      <% } %> 
+
+    </div>
+
+  </div>
+</div>

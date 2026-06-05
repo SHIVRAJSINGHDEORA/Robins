@@ -1,0 +1,50 @@
+<% layout("/layouts/boilerplate") %>
+
+<div class="explore">
+    <div class="more-explore-body">
+        <% if(allListings && allListings.length != 0) {%>
+            <div class="card-row-head">
+                <h5>Explore More !</h5>
+            </div>
+            <hr>
+            <br>
+            <div class="explore-more-listings">
+                <% for(let listing of allListings){ %>
+                    <a href="/listings/<%= listing._id %>" class="listing-link">
+                    <div class="more-explore-card">
+                        <div class="card-img">
+                             <img src="<%= listing.image.url %>" alt="listing" />
+                        </div>
+                        <div class="card-body">
+                            <div class="card-title">
+                                <b><%= listing.title %></b>
+                            </div>
+                            <div class="card-text">
+                                &#8377;<%= listing.price.toLocaleString("en-IN") %>/- Night
+                            </div>
+                        </div>
+                    </div>
+                    </a>
+                <% } %> 
+            </div>
+        <% } else {%>
+            <hr>
+            <div class="no-match d-flex justify-content-around align-items-center">
+                <div>
+                    <h1>No Match Found</h1>
+                    <br>
+                    <h5>Try Again!</h5>
+                    <form action="/listings" method="get">
+                        <button class="btn btn-primary" >Back</button>
+                    </form>
+                </div>
+                <div class="no-match-img ">
+                    <img src="https://res.cloudinary.com/dyssi8wji/image/upload/v1780573294/a1f13085-3edf-4d00-a33a-86069d37fbef_cbsq7j.jpg" alt="no-match">
+                </div>
+                
+            </div>
+            <hr>
+
+            <% } %>
+    </div>
+</div>
